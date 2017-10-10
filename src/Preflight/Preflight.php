@@ -257,7 +257,7 @@ class Preflight
         // Find all of the available commandfiles, save for those that are
         // provided by modules in the selected site; those will be added
         // during bootstrap.
-        $commandfileSearchpath = $configLocator->getCommandFilePaths($preflightArgs->commandPaths());
+        $commandfileSearchpath = $configLocator->getCommandFilePaths($preflightArgs->commandPaths(), $root);
 
         // Require the Composer autoloader for Drupal (if different)
         $loader = $this->environment->loadSiteAutoloader($root);
